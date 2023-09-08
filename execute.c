@@ -1,7 +1,8 @@
 #include "monty.h"
 /**
  * execute_opcode - execute instruction
- * @line:
+ * @opcode:instruction
+ * @value: integer
 */
 void execute_opcode(char *opcode, int value)
 {
