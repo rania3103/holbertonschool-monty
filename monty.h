@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
-extern EXIT_FAILURE;
+extern int EXIT_FAILURE;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
