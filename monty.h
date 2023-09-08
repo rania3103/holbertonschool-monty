@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
-extern EXIT_FAILURE 
+extern EXIT_FAILURE;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,16 +34,6 @@ typedef struct instruction_s
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-struct instruction_t instrcutions[]={
-	{"push", push},
-	{"pint", pint},
-	{"pop", pop},
-	{"swap", swap},
-	{"add", add},
-	{"nop", nop},
-	{"pall", pall},
-	{"NULL", NULL}
-};
 int main(int argc, char *argv[]);
 char **tokenize_line(char *line)
 void execute_opcode(char **tokens);
