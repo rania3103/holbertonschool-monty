@@ -6,7 +6,7 @@
 */
 void execute_opcode(char *opcode, int value)
 {
-	struct instruction_t instrcutions[]={
+	struct instruction_t instructions[]={
 	{"push", push},
 	{"pint", pint},
 	{"pop", pop},
@@ -14,7 +14,7 @@ void execute_opcode(char *opcode, int value)
 	{"add", add},
 	{"nop", nop},
 	{"pall", pall},
-	{"NULL", NULL}
+	{NULL, NULL}
 	};
 
 	int i;
@@ -27,6 +27,6 @@ void execute_opcode(char *opcode, int value)
 			return;
 		}
 	}
-	fprintf(stderr, "L%d: unknown instruction %s", i, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", i, opcode);
 	exit(EXIT_FAILURE);
 }
