@@ -6,13 +6,24 @@
 */
 void execute_opcode(char *opcode, int value)
 {
+	struct instruction_t instrcutions[]={
+	{"push", push},
+	{"pint", pint},
+	{"pop", pop},
+	{"swap", swap},
+	{"add", add},
+	{"nop", nop},
+	{"pall", pall},
+	{"NULL", NULL}
+	};
+
 	int i;
 
 	for(i = 0; instructions.opcode != NULL; i++)
 	{
 		if (strcmp(instructions[i].opcode, opcode) == 0)
 		{
-			instructions[i].f(value);
+			instructions[i].f(&stack, &line_number);
 			return;
 		}
 	}
