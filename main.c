@@ -46,7 +46,9 @@ int main(int argc, char *argv[])
 			nline++;
 			free(tokens);
 		}
+		 r = getline(&line, &len, file);	
 	}
+
 	free(line);
 	fclose(file);
 	return (0);
