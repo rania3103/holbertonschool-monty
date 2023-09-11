@@ -8,7 +8,7 @@
 */
 int main(int argc, char *argv[])
 {
-	size_t len = 0,
+	size_t len = 0;
 	int r;
 	char *line = NULL;
 	char **tokens;
