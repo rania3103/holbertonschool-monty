@@ -32,19 +32,20 @@ int main(int argc, char *argv[])
 	while (r > 0)
 	{
 		tokens = tokenize_line(line);
-		if (isdigit(tokens[1]))
+		if (tokens[0])
 		{
-			value = atoi(tokens[1]);
-			execute_opcode(&stack, nline, tokens[0], value);
+			if (isdigit(tokens[1]))
+			{
+				value = atoi(tokens[1]);
+				execute_opcode(&stack, nline, tokens[0], value);
+			}
+			else
+			{
+				execute_opcode(&stack, nline, tokens[0], 0);
+			}	
+			nline++;
+			free(tokens);
 		}
-		else
-		{
-			/**fprintf(stderr, "L%d: usage: push integer\n", nline);
-			exit(EXIT_FAILURE);**/
-			continue;
-		}
-		nline++;
-		free(tokens);
 	}
 	free(line);
 	fclose(file);
