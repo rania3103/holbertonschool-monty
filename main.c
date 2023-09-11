@@ -8,9 +8,8 @@
 */
 int main(int argc, char *argv[])
 {
-	char buffer[1024];
 	size_t len = 0,
-	ssize_t r = 0;
+	ssize_t r;
 	char *line = NULL;
 	char **tokens;
 	FILE *file;
