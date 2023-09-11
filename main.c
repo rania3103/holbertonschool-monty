@@ -13,6 +13,9 @@ int main(int argc, char *argv[])
 	char *line = NULL;
 	char **tokens;
 	FILE *file;
+	int value;
+	int nline = 1;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
@@ -29,7 +32,17 @@ int main(int argc, char *argv[])
 	while (r > 0)
 	{
 		tokens = tokenize_line(line);
-		execute_opcode(tokens[0], atoi(tokens[1]));
+		if (isdigit(tokens[1]))
+		{
+			value = atoi(tokens[1]);
+			execute_opcode(&stack, nline, tokens[0], value);
+		}
+		else
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", nline);
+			exit(EXIT_FAILURE);
+		}
+		nline++;
 		free(tokens);
 	}
 	free(line);

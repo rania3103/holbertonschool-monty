@@ -1,13 +1,15 @@
 #include "monty.h"
 /**
  * execute_opcode - execute instruction
- * @opcode:instruction
- * @value: integer
+ * @stack:top of the stack.
+ * @line_number: integer.
+ * @opcode:instruction.
+ * @value: integer.
 */
-void execute_opcode(char *opcode, int value)
+
+void execute_opcode(stack_t **stack, int line_number, char *opcode, int value)
 {
-	struct instruction_t instructions[]={
-	{"push", push},
+	struct instruction_t instructions[] = {
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
@@ -19,14 +21,19 @@ void execute_opcode(char *opcode, int value)
 
 	int i;
 
-	for(i = 0; instructions[i].opcode != NULL; i++)
+	for (i = 0; instructions[i].opcode != NULL; i++)
 	{
-		if (strcmp(instructions[i].opcode, opcode) == 0)
+		if (strcmp(opcode, "push") == 0)
 		{
-			instructions[i].f(&stack, &line_number);
+			push(stack, line_number, value);
+
+		}
+		else if (strcmp(instructions[i].opcode, opcode) == 0)
+		{
+			instructions[i].f(stack, line_number);
 			return;
 		}
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", i, opcode);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }

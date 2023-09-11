@@ -4,14 +4,14 @@
  * @stack: the top of the stack
  * @line_number: line number
 */
-void swap(stack_t **stack, line_number)
+void swap(stack_t **stack, int line_number)
 {
 	int tmp;
 
-	if (!(stack) || !(*stack) || !(*stack->next))
+	if (!(stack) || !(*stack) || !(*stack)->next)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
-		exit(EXIT_FAILURE)
+		exit(EXIT_FAILURE);
 	}
 	tmp = (*stack)->n;
 	(*stack)->n = (*stack)->next->n;
@@ -22,7 +22,7 @@ void swap(stack_t **stack, line_number)
  * @stack: the top of the stack
  * @line_number: line number
 */
-void nop(stack_t **stack, line_number)
+void nop(stack_t **stack, int line_number)
 {
 	(void)stack;
 	(void)line_number;
