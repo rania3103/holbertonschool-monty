@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
 			value = atoi(tokens[1]);
 			execute_opcode(&stack, nline, tokens[0], value);
 		}
-		else
+		/**else
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", nline);
 			exit(EXIT_FAILURE);
-		}
+		}*/
 		nline++;
 		free(tokens);
 	}
