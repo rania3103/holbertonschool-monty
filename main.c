@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	size_t len = 0,
-	ssize_t r;
+	int r;
 	char *line = NULL;
 	char **tokens;
 	FILE *file;
