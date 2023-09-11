@@ -6,6 +6,7 @@
 */
 void pall(stack_t **stack, int line_number)
 {
+	(void)line_number;
 	stack_t *node = *stack;
 
 	while(node != NULL)
@@ -32,5 +33,5 @@ void pint(stack_t **stack, int line_number)
 	{
 		tmp = tmp->next;
 	}
-	ptintf("%d\n", tmp->n);
+	printf("%d\n", tmp->n);
 }
