@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 	char buffer[1024];
-	int len = 0, r;
+	size_t len = 0,
+	ssize_t r;
 	char *line = NULL;
 	char **tokens;
 	FILE *file;
