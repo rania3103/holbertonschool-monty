@@ -4,7 +4,7 @@
  * @stack: the top of the stack
  * @line_number: line number
 */
-void pall(stack_t **stack, int line_number)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
 	stack_t *node = *stack;
@@ -20,7 +20,7 @@ void pall(stack_t **stack, int line_number)
  * @stack: the top of the stack
  * @line_number: line number
 */
-void pint(stack_t **stack, int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 

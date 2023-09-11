@@ -7,7 +7,7 @@
  * @value: integer.
 */
 
-void execute_opcode(stack_t **stack, int line_number, char *opcode, int value)
+void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode, int value)
 {
 	instruction_t instructions[] = {
 	{"pint", pint},
