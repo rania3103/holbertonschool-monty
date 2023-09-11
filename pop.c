@@ -17,5 +17,10 @@ void pop(stack_t **stack, unsigned int line_number)
 	/** removing the head node */
 	*stack = head->next;
 
+	if (*stack != NULL)
+	{
+		*stack->prev = NULL;
+	}
+
 	free(head);
 }
