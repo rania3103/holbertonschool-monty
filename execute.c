@@ -9,7 +9,7 @@
 
 void execute_opcode(stack_t **stack, int line_number, char *opcode, int value)
 {
-	struct instruction_t instructions[] = {
+	instruction_t instructions[] = {
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
