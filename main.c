@@ -35,9 +35,8 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                        /**fprintf(stderr, "L%d: usage: push integer\n", nline);
-                        exit(EXIT_FAILURE);**/
-                        continue;
+                        fprintf(stderr, "L%d: usage: push integer\n", nline);
+                        exit(EXIT_FAILURE);
                 }
                 nline++;
                 free(tokens);
