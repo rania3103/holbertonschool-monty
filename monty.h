@@ -41,7 +41,7 @@ int main(int argc, char *argv[]);
 int get_opcode(stack_t **stack, unsigned int line_number, char *opcode);
 void execute_opcode(FILE *file, stack_t **stack);
 //void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode, int value);
-void push(stack_t **stack, unsigned int line_number, int value);
+void push(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
