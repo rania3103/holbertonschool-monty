@@ -1,4 +1,4 @@
-nclude "monty.h"
+include "monty.h"
 /**
  * execute_opcode - execute instruction
  * @stack:top of the stack.
