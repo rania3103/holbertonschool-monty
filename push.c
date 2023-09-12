@@ -3,6 +3,7 @@
  * push - pushes an  element to the stack;
  * @stack: top of the stack
  * @line_number:integer
+ * @value: integer
 */
 void push(stack_t **stack, unsigned int line_number, int value)
 {
