@@ -3,12 +3,12 @@
  * push - pushes an  element to the stack;
  * @stack: top of the stack
  * @line_number:integer
- * @value:integer
 */
-void push(stack_t **stack, unsigned int line_number, int value)
+void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	(void)line_number;
+	int value;
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
