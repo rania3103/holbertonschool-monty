@@ -41,15 +41,15 @@ int get_opcode(stack_t **stack, unsigned int line_number, char *opcode)
 */
 void execute_opcode(FILE *file, stack_t **stack)
 {
-	int r, nline = 1;
+	int r, nline = 0;
 	size_t len = 0;
 	char *line = NULL, *token = NULL;
 
 	r = getline(&line, &len, file);
 	while (r > 0)
 	{
-		token = strtok(line, " \n\t\r");
 		nline++;
+		token = strtok(line, " \n\t\r");
 
 		if (token == NULL)
 			continue;
