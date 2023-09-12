@@ -36,12 +36,9 @@ typedef struct instruction_s
 } instruction_t;
 
 int main(int argc, char *argv[]);
-//char **tokenize_line(char *line);
-
-int get_opcode(stack_t **stack, unsigned int line_number, char *opcode);
-void execute_opcode(FILE *file, stack_t **stack);
-//void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode, int value);
-void push(stack_t **stack, unsigned int line_number);
+char **tokenize_line(char *line);
+void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode, int value);
+void push(stack_t **stack, unsigned int line_number, int value);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
