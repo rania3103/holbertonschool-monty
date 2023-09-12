@@ -10,6 +10,10 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	stack_t *stack = NULL;
+	int r = 0, nline = 1, value;
+	size_t len;
+	char **tokens;
+	char *line;
 
 	if (argc != 2)
 	{
