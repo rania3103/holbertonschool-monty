@@ -6,7 +6,7 @@
 */
 char **tokenize_line(char *line)
 {
-	char **tokens = malloc(1024 * sizeof(char *));
+	char **tokens = malloc(strlen(line) * sizeof(char *));
 	int i = 0;
 
 	if (tokens == NULL)
