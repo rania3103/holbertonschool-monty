@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	        r = getline(&line, &len, file);
+	r = getline(&line, &len, file);
         while (r > 0)
         {
                 tokens = tokenize_line(line);
