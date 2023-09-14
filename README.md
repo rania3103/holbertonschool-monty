@@ -88,7 +88,7 @@ L<line_number>: can't swap, stack too short
 - ### Add
 The opcode ``add`` adds the top two elements of the stack.
 
-#### Usage: ``pop``
+#### Usage: ``add``
 If the stack contains less than two elements, will print the error message:
 ```
 L<line_number>: can't add, stack too short
