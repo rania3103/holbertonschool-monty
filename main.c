@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 			value = strtok(NULL, " \n\t");
 			if (is_int(value) == 0)
 			{
+				free_stack(stack);
 				fprintf(stderr, "L%d: usage: push integer\n", nline);
 				exit(EXIT_FAILURE);
 			}
@@ -44,6 +45,7 @@ int main(int argc, char *argv[])
 		nline++;
 	}
 	free(line);
+	free_stack(stack);
 	fclose(file);
 	return (0);
 }

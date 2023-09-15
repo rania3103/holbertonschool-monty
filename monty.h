@@ -37,6 +37,7 @@ typedef struct instruction_s
 extern char *value;
 int main(int argc, char *argv[]);
 int is_int(char *value);
+void free_stack(stack_t *stack);
 void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode);
 void push(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);

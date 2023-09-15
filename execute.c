@@ -29,6 +29,7 @@ void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode)
 			return;
 		}
 	}
+	free_stack(*stack);
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
