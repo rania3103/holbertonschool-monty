@@ -4,7 +4,7 @@
  * @value: string.
  * Return:0 or 1
 */
-int is_int(char *value)
+int is_int (char *value)
 {
 	size_t i = 0;
 
@@ -16,7 +16,7 @@ int is_int(char *value)
 	{
 		if (!isdigit(value[i]))
 		{
-			return(0);
+			return (0);
 		}
 		i++;
 	}
