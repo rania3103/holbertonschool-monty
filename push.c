@@ -5,7 +5,7 @@
  * @line_number:integer
  * @value: integer
 */
-void push(stack_t **stack, unsigned int line_number, int value)
+void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	(void)line_number;
@@ -16,13 +16,12 @@ void push(stack_t **stack, unsigned int line_number, int value)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = value;
-	new_node->next = *stack;
+	new_node->n = atoi(value);
 	new_node->prev = NULL;
+	new_node->next = *stack;
 	if (*stack)
 	{
 		(*stack)->prev = new_node;
 	}
 	*stack = new_node;
-	free(new_node);
 }
