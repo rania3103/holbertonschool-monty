@@ -1,5 +1,5 @@
 
-# Monty Bytecode Interpreter
+# [Monty Bytecode Interpreter](https://via.placeholder.com/10/00b48a?text=+) 
 
 Monty 0.98 is a scripting language that compiles into Monty bytecode files, similar to Python.
 It operates using a unique stack and specific instructions for manipulating it.
@@ -40,18 +40,19 @@ Montiti@ubuntu:~/monty$
 ```
 
 
-## Flowchart 🚀
-## Compilation 🔧
+## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 🚀
+
+## [Compilation](https://via.placeholder.com/10/00b48a?text=+)  🔧
 ```
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ```
 
-## Usage 😊
+## [Usage](https://via.placeholder.com/10/00b48a?text=+)  😊
 ```
 monty file
 ```
 - 'file' is the path to the file containing Monty byte code
-## Opcodes 📃
+## [Opcodes](https://via.placeholder.com/10/00b48a?text=+)  📃
 - ### Push
 The opcode ``push`` pushes an element to the stack.
 
@@ -97,7 +98,7 @@ L<line_number>: can't add, stack too short
 The opcode ``nop`` doesn’t do anything.
 
 #### Usage: ``nop``
-## Usage example 👩‍💻
+## [Usage example](https://via.placeholder.com/10/00b48a?text=+)  👩‍💻
 ```
 Montiti@ubuntu:~/monty$ cat bytecodes/09.m 
 push 1
@@ -116,9 +117,8 @@ Montiti@ubuntu:~/monty$ ./monty bytecodes/09.m
 Montiti@ubuntu:~/monty$ 
 ```
 
-## Authors
+## [Authors](https://via.placeholder.com/10/00b48a?text=+) 
 
 - [@Amal Elzowawi](https://www.github.com/amaalyy)
 - [@Mariam Charrada](https://www.github.com/ariamCHARRADAM)
 - [@Rania Abassi](https://www.github.com/rania3103)
-
