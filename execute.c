@@ -7,10 +7,10 @@
  * @value: integer.
 */
 
-void execute_opcode(stack_t **stack, unsigned int line_number,
-char *opcode, int value)
+void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode)
 {
 	instruction_t instructions[] = {
+	{"push", push},
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
@@ -24,12 +24,7 @@ char *opcode, int value)
 
 	for (i = 0; instructions[i].opcode != NULL; i++)
 	{
-		if (strcmp(opcode, "push") == 0)
-		{
-			push(stack, line_number, value);
-
-		}
-		else if (strcmp(instructions[i].opcode, opcode) == 0)
+		if (strcmp(instructions[i].opcode, opcode) == 0)
 		{
 			instructions[i].f(stack, line_number);
 			return;
