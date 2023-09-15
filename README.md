@@ -42,6 +42,8 @@ Montiti@ubuntu:~/monty$
 
 ## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 🚀
 
+![App Screenshot](./flowchart.jpg)
+
 ## [Compilation](https://via.placeholder.com/10/00b48a?text=+)  🔧
 ```
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
