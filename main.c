@@ -6,10 +6,10 @@
  * @argv:argument vector
  * Return: 0
 */
-char *value = NULL;
 
 int main(int argc, char *argv[])
 {
+	char *value = NULL;
 	FILE *file;
 	stack_t *stack = NULL;
 	int r = 0, nline = 1;
