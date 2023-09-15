@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	while ((r = getline(&line, &len, file)) != -1)
 	{
-		opcode = strtok(line , " \n\t");
+		opcode = strtok(line, " \n\t");
 		if (strcmp(opcode, "push") == 0)
 		{
 			value = strtok(NULL, " \n\t");
