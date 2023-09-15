@@ -4,7 +4,6 @@
  * @stack:top of the stack.
  * @line_number: integer.
  * @opcode:instruction.
- * @value: integer.
 */
 
 void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode)
