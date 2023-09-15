@@ -34,11 +34,11 @@ typedef struct instruction_s
 		char *opcode;
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+extern char *value;
 int main(int argc, char *argv[]);
-char **tokenize_line(char *line);
-void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode, int value);
-void push(stack_t **stack, unsigned int line_number, int value);
+int is_int(char *value);
+void execute_opcode(stack_t **stack, unsigned int line_number, char *opcode);
+void push(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
