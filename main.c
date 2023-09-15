@@ -6,6 +6,8 @@
  * @argv:argument vector
  * Return: 0
 */
+char *value = NULL;
+
 int main(int argc, char *argv[])
 {
 	FILE *file;
