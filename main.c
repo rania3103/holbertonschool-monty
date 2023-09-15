@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	stack_t *stack = NULL;
-	int r = 0, nline = 1, value;
+	int r = 0, nline = 1;
 	size_t len;
-	char **tokens;
+	char *opcode;
 	char *line;
 
 	if (argc != 2)
@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
@@ -28,22 +27,20 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	r = getline(&line, &len, file);
-	while (r > 0)
+	while ((r = getline(&line, &len, file)) != -1)
 	{
-		tokens = tokenize_line(line);
-		if (isdigit(tokens[1]))
+		opcode = strtok(line , " \n\t");
+		if (strcmp(opcode, "push") == 0)
 		{
-			value = atoi(tokens[1]);
-			execute_opcode(&stack, nline, tokens[0], value);
+			value = strtok(NULL, " \n\t");
+			if (is_int(value) == 0)
+			{
+				fprintf(stderr, "L%d: usage: push integer\n", nline);
+				exit(EXIT_FAILURE);
+			}
 		}
-		else
-		{
-			fprintf(stderr, "L%d: usage: push integer\n", nline);
-			exit(EXIT_FAILURE);
-		}
+		execute_opcode(&stack, nline, opcode);
 		nline++;
-		free(tokens);
 	}
 	free(line);
 	fclose(file);
